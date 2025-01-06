@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontAwesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Creepster&family=Ga+Maamli&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- font style for amount -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Sedan+SC&display=swap" rel="stylesheet">
+
+    <!-- main style sheet -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="products & preProduct.css">
+    <link rel="stylesheet" href="login&register.css">
+    <link rel="stylesheet" href="filter.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-box nav-box1">
+            <img src="./logo and web related pics/16Sep24 Simon Online Shop Free Upload.png" alt="">
+            <h2>Jaas Store</h2>
+        </div>
+        <div class="nav-box nav-box2">
+            <ul>
+                <li class="home">Home</li>
+                <li class="features">Features</li>
+                <li class="term">Term & Policy</li>
+                <li class="aboutUs">About Us</li>
+            </ul>
+        </div>
+        <div class="nav-box nav-box3">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass Searchbar"></i>
+            </div>
+            <div class="filter-box">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+            <div class="user-login" id="user-login">
+                <i class="fa-solid fa-user" id=""></i>
+            </div>
+        </div>
+    </nav>
+        <div class="filter" id="filter">
+            <h2>Filter</h2>
+            <span class="close-filter"><i class="fa-solid fa-arrow-left-long"></i></span>
+            <div class="filter-child">
+                <div class="categories-box">
+                    <h3>Categories</h3>
+                    <div class="category-box box">
+                        <input  type="checkbox" id="filter-WomenHandbags" name="category" value="WomenHandbags" class="category">
+                        <label for="filter-WomenHandbags">Women's Handbags</label>
+                    </div>
+                    <div class="category-box box">
+                        <input type="checkbox" id="filter-MenShoes" name="category" value="MenShoes" class="category">
+                        <label for="filter-MenShoes">Men's Shoes</label>
+                    </div>
+                    <div class="category-box box">
+                        <input type="checkbox" id="filter-baby" name="" value="filter" class="category">
+                        <label for="filter-baby">Baby's Shoes</label>
+                    </div>
+                    <div class="category-box box">
+                        <input type="checkbox" id="filter-bags" name="" value="filter" class="category">
+                        <label for="filter-bags">Girl's Bags</label>
+                    </div>
+                </div>
+                <div class="sizes-box">
+                  <h3>Sizes</h3>
+                  <div class="size-box box">
+                    <input type="checkbox" class="size" name="small" id="filter-S" value="S">
+                    <label for="filter-S">Small Size</label>
+                  </div>
+                  <div class="size-box box">
+                    <input type="checkbox" class="size" name="medium" id="filter-M" value="M">
+                    <label for="filter-M">Medium Size</label>
+                  </div>
+                  <div class="size-box box">
+                    <input type="checkbox" class="size" name="large" id="filter-L" value="L">
+                    <label for="filter-L">Large Size</label>
+                  </div>
+                  <div class="size-box box">
+                    <input type="checkbox" class="size" name="x-large" id="filter-XL" value="XL">
+                    <label for="filter-XL">X-Large Size</label>
+                  </div>
+                </div>
+                <div class="colors-box">
+                    <h3>Colors</h3>
+                    <div class="color-box box">
+                        <input type="checkbox" name="red" value="Red" id="filter-red" class="color">
+                        <label for="filter-red">Red Color</label>
+                    </div>
+                    <div class="color-box box">
+                        <input type="checkbox" name="blue" value="Blue" id="filter-blue" class="color">
+                        <label for="filter-blue">Blue Color</label>
+                    </div>
+                    <div class="color-box box">
+                        <input type="checkbox" name="green" value="Green" id="filter-green" class="color">
+                        <label for="filter-green">Green Color</label>
+                    </div>
+                    <div class="color-box box">
+                        <input type="checkbox" name="yellow" value="Yellow" id="filter-yellow" class="color">
+                        <label for="filter-yellow">Yellow Color</label>
+                    </div>
+                    <div class="color-box box">
+                        <input type="checkbox" name="black" value="Black" id="filter-black" class="color">
+                        <label for="filter-black">Black Color</label>
+                    </div>
+                </div>
+                <div class="price-filter-box">
+                    <h3>Price</h3>
+                    <div class="min-price-box">
+                        <h5>Minimum price</h5>
+                        <div class="price-box">
+                            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="0" class="min-price">
+                            <button class="add"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="max-price-box">
+                        <h5>Maximum price</h5>
+                        <div class="price-box">
+                            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="number" value="50" class="max-price">
+                            <button class="add"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="apply">
+                <p class="apply-filter">Apply</p>
+                <p class="clear-filter">Clear</p>
+            </div>
+            
+        </div>    
+        <div class="root" id="root">
+            <input type="search" class="search-box" id="search-box" placeholder="Search Here What you Want......">
+            <div class="slideshow">
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">1 / 2</div> -->
+                    <img src="./logo and web related pics/Red Bright Christmas Sale Promotion Facebook Cover.png">
+                    <!-- <div class="text">Caption Two</div> -->
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                    <!-- <div class="numbertext">2 / 2</div> -->
+                    <img src="./logo and web related pics/Red simple sale Facebook Cover .png">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+            </div>
+            <div class="categories">
+                <div class="category">
+                    <p> Men-Shoes </p>
+                </div>
+                <div class="category">
+                    <p> Lady-Shoes </p>
+                </div>
+                <div class="category">
+                    <p> Baby-Shoes </p>
+                </div>
+                <div class="category">
+                    <p> Hand-bags </p>
+                </div>
+                <div class="category">
+                    <p> Men-Tshirts </p>
+                </div>
+                <div class="category">
+                    <p> Girl-Tshirts </p>
+                </div>
+                <div class="category">
+                    <p> ladies-Pants </p>
+                </div>
+                <div class="category">
+                    <p> Men-Pants </p>
+                </div>
+            </div>
+            <div class="products-container" id="products-container">
+                <!-- <div class="product-loading"> 
+                    <p>Loading</p>
+                    <dotlottie-player 
+                        src="https://lottie.host/f8988193-bae4-4053-b915-875022eb5260/6A1sHSuDDY.lottie" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100px; height: 100px" 
+                        loop autoplay>
+                    </dotlottie-player> 
+                    <dotlottie-player 
+                    src="https://lottie.host/ae08cc6f-7088-4fb0-ac4a-d6ddd87957f8/snWgl8Pp2F.lottie" 
+                    background="transparent" 
+                    speed="1" 
+                    style="width: 200px; height: 100px" 
+                    loop autoplay></dotlottie-player>
+                </div> -->
+            </div>
+            <div class="product-preview-container">
+                <!-- <div class="product-preview" id="product-preview">
+                    <div class="part-1">
+                        <div class="part-1-a">
+                            <span class="close-preview" id="close-preview">&times;</span>
+                            <img src="./IMG-20241222-WA0062.jpg" alt="" class="product-pic-preview">
+                        </div>
+                        <div class="part-1-b">
+                            <p class="preview-title">Elegent lether hand-bag 
+                                <span class="tags">#lether #hand-bag #confortable #fasion #nice-look</span>
+                            </p>
+                            <p class="price">Price : <span class="current-price">150</span>$   <span class="actul-price">300</span>$(<span>50</span>%)</p>
+                        </div>
+                    </div>
+                    <div class="part-2">
+                        <h3 class="">Brand : <span class="brand-name">Avenue</span></h3>
+                        <p class="item-code">Product Serial No : <span class="item-code">1000234</span></p>
+                        <div class="description">
+                            <p>Description</p>
+                        </div>
+                        <div class="description-preview">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo cupiditate repellendus expedita ut vero odit, ipsum, officia optio soluta itaque excepturi tempora eum ab maiores velit accusamus quo vel blanditiis sunt repudiandae nisi magnam suscipit? Placeat voluptate, ducimus labore nulla, odio consequatur libero, sequi nihil eligendi sunt fuga similique?
+                            </p>
+                        </div>
+                        <div class="size-unit">
+                            <div class="size">
+                                <p>Size : </p>
+                                <div class="size-options">
+                                    <div class="size-option">
+                                        <input type="radio" id="size-s" name="size" value="S">
+                                        <label for="size-s">S</label>
+                                    </div>
+                                    <div class="size-option">
+                                        <input type="radio" id="size-m" name="size" value="M">
+                                        <label for="size-m">M</label>
+                                    </div>
+                                    <div class="size-option">
+                                        <input type="radio" id="size-l" name="size" value="L">
+                                        <label for="size-l">L</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="unit-box">
+                                <p>Unit : </p>
+                                <div class="unit-option">
+                                    <button class="add"><i class="fa-solid fa-plus"></i></button>
+                                    <span> 1 </span>
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating-box">
+                            <p>Rating (<span class="rating-no">230</span>) :</p>
+                            <div class="rate">
+                                <img src="./logo and web related pics/star.png" alt="">
+                                <img src="./logo and web related pics/star.png" alt="">
+                                <img src="./logo and web related pics/star.png" alt="">
+                                <img src="./logo and web related pics/star.png" alt="">
+                                <img src="./logo and web related pics/rating.png" alt="">
+                                <p>(4.5)</p>
+                            </div>
+                        </div>
+
+                        <div class="review-preview">
+                            <p>Reviews</p>
+                            <div class="review-content">
+                                <div class="head-box">
+                                    <img src="./IMG-20241222-WA0064.jpg" alt="">
+                                    <p>Farhan mjm  📅<span class="review-time">10.12.2023 (02:44pm)</span></p>
+                                </div>
+                                <div class="rev-box">
+                                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quia."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addToCard-buyNow">
+                    <p>Total Amount : 400$ (product: 350$ + Delivery fee : 50$)</p>
+                    <div>
+                        <button>Add to Card</button>
+                        <button>Buy Now</button>
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="loading-animation">
+                <dotlottie-player src="https://lottie.host/ae08cc6f-7088-4fb0-ac4a-d6ddd87957f8/snWgl8Pp2F.lottie" background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay></dotlottie-player>
+            </div>
+
+            <div class="login" id="login">
+                <h3>Login</h3>
+                <fieldset>
+                    <legend>Email<sup><i class="fa-regular fa-circle-question" style="color: #0a0a0a;"></i></sup></legend>
+                    <input type="email" class="login-inp" name="email" id="log-email">
+                </fieldset>
+                <fieldset class="password-field">
+                    <legend>Password</legend>
+                    <input type="password" class="login-inp" name="password" id="log-password">
+                    <!-- <span class="close-eye"><i class="fa-regular fa-eye-slash"></i></span> -->
+                    <span class="open-eye"><i class="fa-regular fa-eye"></i></span>
+                </fieldset>
+                <button>Enter</button>
+                <p class="forget-password-erroe">
+                    Did you <span class="forger-password blue-link">Forget</span> password ?
+                </p>
+                <p class="regiset-pera">If you hav'nt account <span class="register-entry blue-link">Register</span> now.</p>
+            </div>
+
+            <div class="register-form" id="register-form">
+                <form action="" method="" id="form" class="form">
+                    <i class="fa-solid fa-arrow-right-long close-tab"></i>
+                    <h3>Welcome <br>to Jaas Store</h3>
+                    <!-- <img src="./logo and web related pics/16Sep24 Simon Online Shop Free Upload.png" alt=""> -->
+                    <div class="name-box">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name...">
+                        <p class="error-message">some thing wrong</p>
+                        <span class="error ero-show"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <span class="succ ero-show" style="display: none;"><i class="fa-regular fa-circle-check"></i></span>
+                    </div>
+                    <div class="number-boxnumber-box">
+                        <label for="number">Mobile number</label>
+                        <span class="qar-code">( +974 )</span>
+                        <input type="number" id="number" name="number" placeholder="Enter your mobile number...">
+                        <p class="error-message">some thing wrong</p>
+                        <span class="error ero-show"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <span class="succ ero-show" style="display: none;"><i class="fa-regular fa-circle-check"></i></span>
+                    </div>
+                    <div class="email-box">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address....">
+                        <p class="error-message">some thing wrong</p>
+                        <span class="error ero-show"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <span class="succ ero-show" style="display: none;"><i class="fa-regular fa-circle-check"></i></span>
+                    </div>
+                    <div class="password-box pssword-section">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="*******" class="password">
+                        <p class="error-message">some thing wrong</p>
+                        <span class="close-eye ero-show"><i class="fa-regular fa-eye-slash"></i></span>
+                        <span class="open-eye ero-show" style="display: none;"><i class="fa-regular fa-eye"></i></span>
+                    </div>
+                    <div class="c-password-box pssword-section">
+                        <label for="c-password">Conforem password</label>
+                        <input type="password" name="c-password" id="c-password" placeholder="*******" class="password">
+                        <p class="error-message">some thing wrong</p>
+                        <span class="close-eye ero-show"><i class="fa-regular fa-eye-slash"></i></span>
+                        <span class="open-eye ero-show" style="display: none;"><i class="fa-regular fa-eye"></i></span>
+                    </div>
+                </form>
+            </div>
+            
+
+
+
+
+
+
+
+    <!-- <p class="down-arrow"><i class="fa-solid fa-sort-down"></i></p>
+    <p class="up-arrow" style="display: none;"><i class="fa-solid fa-caret-up"></i></p> -->
+
+
+
+
+
+        </div> 
+
+
+
+    <!-- script for Autoplaying carousels without controls form boostrap camp -->
+    <!-- <sc src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+        
+        
+
+
+
+        <!-- script for lottie file animation for lazy loading -->
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        
+
+        <!-- script for lottie file animation  -->
+        <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
+
+       
+        <!-- script for lottie file in product container -->
+        <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
+        
+        <script type="module" src="main.js"></script>
+        <script src="productAndPreproduct.js" type="module"></script>
+        <script src="filter.js" type="module"></script>
+</body>
+</html>
