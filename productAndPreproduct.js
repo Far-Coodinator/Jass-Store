@@ -110,6 +110,7 @@ function showproductPreview(product,offerPrice,ratingstars){
                 <div class="part-1">
                     <div class="part-1-a">
                         <span class="close-preview" id="close-preview">&times;</span>
+                        <i class="fa-solid fa-left-long pre-back"></i>
                         <img src="${product.imagePath}" alt="" class="product-pic-preview">
                     </div>
                     <div class="part-1-b">
@@ -167,7 +168,9 @@ function showproductPreview(product,offerPrice,ratingstars){
                 </div>
             </div>
             <div class="addToCard-buyNow">
-                    <p>Total Amount : 400$ (product: 350$ + Delivery fee : 50$)</p>
+                    <div>
+                    <p>Total Amount : 400$ (product: 350$ + Delivery fee : 50$)</p></div>
+                    
                     <div>
                         <button>Add to Card</button>
                         <button>Buy Now</button>
