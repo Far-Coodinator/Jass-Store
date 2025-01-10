@@ -1,4 +1,4 @@
-const ladyHandBags = 
+const ladyhandbags = 
 [
     {
         id: 1,
