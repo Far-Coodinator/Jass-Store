@@ -12,7 +12,9 @@
     --product-preview-shadow : rgba(14, 13, 13, 0.772);
     --sh:rgba(43, 41, 41, 0.281);
 }
-
+#root .mob-search-box{
+    display: none;
+}
 
 
 nav{
