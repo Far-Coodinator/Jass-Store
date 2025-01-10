@@ -1,4 +1,4 @@
-import dataBase from "./Data Base.js";
+import dataBase from "./DataBase.js";
 
 
 
