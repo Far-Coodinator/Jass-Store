@@ -652,4 +652,4 @@ const ladyhandbags =
 
 
 
-export default ladyHandBags;
+export default ladyhandbags;
