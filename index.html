@@ -19,6 +19,7 @@
 
     <!-- main style sheet -->
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="products & preProduct.css">
     <link rel="stylesheet" href="login&register.css">
     <link rel="stylesheet" href="filter.css">
@@ -142,7 +143,14 @@
             
         </div>    
         <div class="root" id="root">
-            <input type="search" class="search-box" id="search-box" placeholder="Search Here What you Want......">
+            <input type="search" class="search-box" id="search-box-dec" placeholder="Search Here What you Want......">
+            <div class="mob-search-box">
+                
+                <input type="search" class="search-box" id="search-box" placeholder="Search Here What you Want......">
+                <div class="filter-box">
+                    <i class="fa-solid fa-filter"></i>
+                    </div>
+            </div>
             <div class="slideshow">
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">1 / 2</div> -->
@@ -368,7 +376,13 @@
 
 
         </div> 
-
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="option"><i class="fa-solid fa-bars"></i></div>
+            <div class="option"><i class="fa-regular fa-user"></i></div>
+            <div class="option"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="option"><i class="fa-regular fa-heart"></i></div>
+            <div class="option"><i class="fa-solid fa-house"></i></div>
+        </div>
 
 
     <!-- script for Autoplaying carousels without controls form boostrap camp -->
@@ -388,8 +402,11 @@
        
         <!-- script for lottie file in product container -->
         <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
+        <!-- j query file -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         
         <script type="module" src="main.js"></script>
+        <script src="Data Base.js" type="module"></script>
         <script src="productAndPreproduct.js" type="module"></script>
         <script src="filter.js" type="module"></script>
 </body>

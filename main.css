@@ -68,6 +68,9 @@ nav > div{
     padding-top: 20px;
     transition: all .3s;
 }
+.mob-search-box{
+    display: none;
+}
 
 #root .search-box{
     margin:0 auto 20px;
