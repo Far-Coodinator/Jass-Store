@@ -1,15 +1,5 @@
-// stop screen rotation
-if (screen.orientation && screen.orientation.lock) {
-    screen.orientation.lock('portrait') // Lock to portrait mode
-        .then(() => {
-            console.log("Screen orientation locked to portrait.");
-        })
-        .catch((error) => {
-            console.error("Failed to lock the screen orientation:", error);
-        });
-} else {
-    console.warn("Screen Orientation API is not supported in this browser.");
-}
+
+
 
 
 
