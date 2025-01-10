@@ -1,9 +1,9 @@
 import menShoes from "./category-datas/menShoes.js";
-import ladyHandBags from "./category-datas/ladyhandbags.js";
+// import ladyHandBags from "./category-datas/ladyhandbags.js";
 import ladyShoes from "./category-datas/ladyShoes.js";
 import babyShoes from "./category-datas/babyShoes.js";
 
-let dataBase = mixDatas([menShoes,ladyHandBags,ladyShoes,babyShoes]);
+let dataBase = mixDatas([menShoes,ladyShoes,babyShoes]);
 
 function mixDatas(orderedDatas){
     let mixedDatas = [];
