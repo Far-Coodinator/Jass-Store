@@ -168,9 +168,9 @@ function showproductPreview(product,offerPrice,ratingstars){
                 </div>
             </div>
             <div class="addToCard-buyNow">
-                    <div>
-                    <p>Total Amount : 400$ (product: 350$ + Delivery fee : 50$)</p></div>
-                    
+                    <div class="first-child">
+                    <p>Total Amount : 400$ (product: 350$ + Delivery fee : 50$)</p>
+                    </div>
                     <div>
                         <button>Add to Card</button>
                         <button>Buy Now</button>
@@ -186,7 +186,9 @@ function showproductPreview(product,offerPrice,ratingstars){
     document.querySelector('#root .product-preview-container .part-1-a .close-preview').addEventListener('click',()=>{
         productPreviewContainer.style.display = 'none'
     })
-
+    $('#root .product-preview-container .part-1-a .pre-back').on('click',()=>{
+        productPreviewContainer.style.display = 'none'
+    });
 
     // function for increse the quantity
     document.querySelector('.product-preview-container .add').addEventListener('click',()=>{

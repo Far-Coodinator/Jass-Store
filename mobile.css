@@ -4,14 +4,14 @@
     }
     nav{
         justify-content: start;
-        padding-left: 20px;
+        padding-left: 10px;
         position: static;
     }
     .nav-box1 img{
         width: 30px;
     }
     .nav-box1{
-        font-size: .8em;
+        font-size: .89em;
 
     }
     .nav-box2,.nav-box3{
@@ -22,7 +22,7 @@
     }
     #root .mob-search-box{
         display: block;
-        position: sticky;
+        position: static;
         top: 0px;
         background-color: white;
         height: max-content;
@@ -68,7 +68,8 @@
     #root .categories{
         justify-content: start;
         position: sticky;
-        top: 37px;
+        padding: 10px 0;
+        top: 0;
         z-index: 10;
         background-color: white;
         font-size: 15px;
@@ -120,11 +121,26 @@
         position: absolute;
         top: 10px;
         left: 25px;
+        cursor: pointer;
     }
     .product-preview-container .addToCard-buyNow{
         position: absolute;
         bottom: 50px;
         width: 100%;
+    }
+    .product-preview-container .addToCard-buyNow .first-child{
+        font-size: 12px;
+        width: 50%;
+    }
+    .product-preview-container .addToCard-buyNow :not(.first-child){
+        display: flex;
+    }
+    .product-preview-container .addToCard-buyNow button{
+        width: 45%;
+        border: none;
+        margin-left: 2px;
+        padding: 2px;
+        vertical-align: middle;
     }
 
 }

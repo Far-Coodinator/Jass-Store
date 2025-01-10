@@ -28,7 +28,7 @@ const babyShoes =
         rating: 4,
         tags: ["elegant", "leather", "spacious", "daily", "office", "luxury", "practical", "designer", "classic", "versatile"],
         color: "Black",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "An elegant black leather tote perfect for professional and casual settings. Its spacious design provides ample storage while maintaining a sleek and luxurious appearance."
     },
     {
@@ -59,7 +59,7 @@ const babyShoes =
         rating: 3.4,
         tags: ["crossbody", "trendy", "compact", "casual", "hands-free", "durable", "modern", "functional", "stylish", "daily"],
         color: "Brown",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This chic crossbody bag is designed for hands-free convenience while maintaining a fashionable appeal. Its compact size is perfect for casual outings and everyday use."
     },
     {
@@ -90,7 +90,7 @@ const babyShoes =
         rating: 2,
         tags: ["clutch", "classic", "luxury", "formal", "elegant", "party", "evening", "sophisticated", "designer", "refined"],
         color: "Gold",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A timeless gold clutch purse that exudes elegance and sophistication. Perfect for parties and formal events, it pairs seamlessly with upscale evening wear."
     },
     {
@@ -121,7 +121,7 @@ const babyShoes =
         rating: 4.7,
         tags: ["hobo", "spacious", "versatile", "daily", "modern", "durable", "comfortable", "fashionable", "casual", "practical"],
         color: "Navy Blue",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A navy blue hobo bag offering a roomy interior and versatile design. Ideal for carrying essentials in style, whether for work or casual outings."
     },
     {
@@ -152,7 +152,7 @@ const babyShoes =
         rating: 4.5,
         tags: ["backpack", "trendy", "functional", "travel", "casual", "lightweight", "hands-free", "practical", "modern", "durable"],
         color: "Pink",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This trendy backpack purse combines style and functionality. Perfect for travel and daily use, its lightweight design ensures comfort while on the go."
     },{
         id: 6,
@@ -182,7 +182,7 @@ const babyShoes =
         rating: 4,
         tags: ["elegant", "leather", "spacious", "daily", "office", "luxury", "practical", "designer", "classic", "versatile"],
         color: "Black",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "An elegant black leather tote perfect for professional and casual settings. Its spacious design provides ample storage while maintaining a sleek and luxurious appearance."
     },
     {
@@ -213,7 +213,7 @@ const babyShoes =
         rating: 3,
         tags: ["crossbody", "trendy", "compact", "casual", "hands-free", "durable", "modern", "functional", "stylish", "daily"],
         color: "Brown",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This chic crossbody bag is designed for hands-free convenience while maintaining a fashionable appeal. Its compact size is perfect for casual outings and everyday use."
     },
     {
@@ -244,7 +244,7 @@ const babyShoes =
         rating: 3.4,
         tags: ["clutch", "classic", "luxury", "formal", "elegant", "party", "evening", "sophisticated", "designer", "refined"],
         color: "Gold",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A timeless gold clutch purse that exudes elegance and sophistication. Perfect for parties and formal events, it pairs seamlessly with upscale evening wear."
     },
     {
@@ -275,7 +275,7 @@ const babyShoes =
         rating: 4.7,
         tags: ["hobo", "spacious", "versatile", "daily", "modern", "durable", "comfortable", "fashionable", "casual", "practical"],
         color: "Navy Blue",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A navy blue hobo bag offering a roomy interior and versatile design. Ideal for carrying essentials in style, whether for work or casual outings."
     },
     {
@@ -306,7 +306,7 @@ const babyShoes =
         rating: 2.5,
         tags: ["backpack", "trendy", "functional", "travel", "casual", "lightweight", "hands-free", "practical", "modern", "durable"],
         color: "Pink",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This trendy backpack purse combines style and functionality. Perfect for travel and daily use, its lightweight design ensures comfort while on the go."
     },{
         id: 11,
@@ -336,7 +336,7 @@ const babyShoes =
         rating: 3.8,
         tags: ["elegant", "leather", "spacious", "daily", "office", "luxury", "practical", "designer", "classic", "versatile"],
         color: "Black",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "An elegant black leather tote perfect for professional and casual settings. Its spacious design provides ample storage while maintaining a sleek and luxurious appearance."
     },
     {
@@ -367,7 +367,7 @@ const babyShoes =
         rating: 4.6,
         tags: ["crossbody", "trendy", "compact", "casual", "hands-free", "durable", "modern", "functional", "stylish", "daily"],
         color: "Brown",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This chic crossbody bag is designed for hands-free convenience while maintaining a fashionable appeal. Its compact size is perfect for casual outings and everyday use."
     },
     {
@@ -398,7 +398,7 @@ const babyShoes =
         rating: 2.9,
         tags: ["clutch", "classic", "luxury", "formal", "elegant", "party", "evening", "sophisticated", "designer", "refined"],
         color: "Gold",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A timeless gold clutch purse that exudes elegance and sophistication. Perfect for parties and formal events, it pairs seamlessly with upscale evening wear."
     },
     {
@@ -429,7 +429,7 @@ const babyShoes =
         rating: 2,
         tags: ["hobo", "spacious", "versatile", "daily", "modern", "durable", "comfortable", "fashionable", "casual", "practical"],
         color: "Navy Blue",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "A navy blue hobo bag offering a roomy interior and versatile design. Ideal for carrying essentials in style, whether for work or casual outings."
     },
     {
@@ -460,7 +460,7 @@ const babyShoes =
         rating: 3.5,
         tags: ["backpack", "trendy", "functional", "travel", "casual", "lightweight", "hands-free", "practical", "modern", "durable"],
         color: "Pink",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "This trendy backpack purse combines style and functionality. Perfect for travel and daily use, its lightweight design ensures comfort while on the go."
     },{
         id: 16,
@@ -490,7 +490,7 @@ const babyShoes =
         rating: 4,
         tags: ["elegant", "leather", "spacious", "daily", "office", "luxury", "practical", "designer", "classic", "versatile"],
         color: "Black",
-        availableSizes: ["One Size"],
+        availableSizes: ["M","S","L"],
         description: "An elegant black leather tote perfect for professional and casual settings. Its spacious design provides ample storage while maintaining a sleek and luxurious appearance."
     },
 ]
