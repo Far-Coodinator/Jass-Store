@@ -1,7 +1,8 @@
-import handbagsData from "./ladies-hand-bags .js";
-import shoes from "./men-shoes.js";
-import displayProducts from "./productAndPreproduct.js";
- let data = [...handbagsData,...shoes]
+import dataBase from "./Data Base.js";
+
+
+
+
 
 document.querySelector('#filter .apply .apply-filter').addEventListener('click',()=>{
     const categoriesElement = document.querySelectorAll('#filter .categories-box input.category:checked');
@@ -14,7 +15,7 @@ document.querySelector('#filter .apply .apply-filter').addEventListener('click',
     const colors = colorsElement.length ? Array.from(colorsElement, el => el.value) : [];
     const sizes = sizesElement.length ? Array.from(sizesElement, el => el.value) : [];
 
-    const filteredData = data.filter(product =>{
+    const filteredData = dataBase.filter(product =>{
         return (!categories.length || categories.includes(product.category))&&
             (!colors.length || checkArrayInArray(colors,product.color))&&
             (!sizes.length || checkArrayInArray(sizes,product.availableSizes))&&

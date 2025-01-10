@@ -1,14 +1,5 @@
-import handbagsData from "./ladies-hand-bags .js";
-import shoes from "./men-shoes.js";
-const orderedDatas = [handbagsData,shoes]
-
-let data = mixDatas(orderedDatas)
-console.log(data)
-// make random datafunction generateRandomData
-let randomIndex = Math.floor(Math.random() * data.length)
-let cutFront = data.splice(0,randomIndex)
-data.push(...cutFront);
-let check = data.map(x=>x.id)
+import dataBase from "./Data Base.js";
+console.log(dataBase)
 
 
 
@@ -31,9 +22,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     function pageRender(page){
         const start = (page-1) * itemsPerPage;
         const end = page * itemsPerPage;
-        const dataSlice = data.slice(start,end);
+        const dataSlice = dataBase.slice(start,end);
         displayProducts(dataSlice,false)
-        if(end >= data.length)
+        if(end >= dataBase.length)
             loader.style.display = 'none';
     }
 
@@ -53,6 +44,7 @@ function displayProducts(data,filterd){
         const productElement = document.createElement('div')
         productElement.className = 'product'
         productElement.id = product.id
+        productElement.setAttribute('data-category', product.category);
         if(!filterd)
             container.appendChild(productElement)
         else
@@ -233,18 +225,7 @@ function sizeRadioBtn(productId,array){
 }
 
 
-function mixDatas(orderedDatas){
-    let mixedDatas = [];
-    let max = Math.max(...orderedDatas.map(x=>x.length));
-    for(let i=0; i<max; i++){
-        if(orderedDatas[0][i])
-            mixedDatas.push(orderedDatas[0][i]);
-        if(orderedDatas[1][i])
-            mixedDatas.push(orderedDatas[1][i])
-    }
-    
-    return mixedDatas;
-}
+
 
 
 
