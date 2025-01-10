@@ -1,4 +1,4 @@
-@media  screen and (max-width:650px) {
+@media  all and (max-width:650px) {
     body{
         background-color: white;
     }
@@ -26,7 +26,7 @@
         top: 0px;
         background-color: white;
         height: max-content;
-        z-index: 10;
+        z-index:10;
         padding: 5px;
         display: flex;
         justify-content: center;
@@ -49,12 +49,63 @@
         width: 100%;
         background-color: white;
         justify-content: space-between;
-        padding: 10px 35px;
+        padding: 10px 30px;
     }
     #mobile-nav>div{
         height: 100%;
         cursor: pointer;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-nav i {
+        font-size: 20px;
+    }
+    #root .categories{
+        justify-content: start;
+        position: sticky;
+        top: 37px;
+        z-index: 10;
+        background-color: white;
+        font-size: 15px;
     }
 
+    /* product  */
+    .products-container{
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
+    .products-container .product{
+        font-size: 0.7rem  !important;
+        
+    }
+
+    .loading-animation .loading{
+        width: 50px ;
+        height: 50px ;
+    }
+    .product-preview-container{
+        z-index: 1000;
+        height: calc(100% -50)  !important;
+    }
+
+    .product-preview-container .product-preview{
+        width: 100% !important;
+        height: 100% !important;
+        overflow: scroll;
+        
+        flex-direction: column;
+    }
+    .product-preview-container .product-preview > div{
+        overflow: visible !important;
+    }
+    .product-preview-container part-1-a .mob-pre-back-arrow{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
 
 }

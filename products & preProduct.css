@@ -64,6 +64,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
+}
+.loading-animation .loading{
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -120,6 +125,11 @@
     background-color: var(--white);
     color: var(--border) ;
 
+}
+
+
+.mob-pre-back-arrow{
+    display: none;
 }
 .product-preview-container .part-1-a span:hover{
     background-color: var(--border);

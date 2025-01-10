@@ -1,7 +1,6 @@
 import dataBase from "./DataBase.js";
-console.log(dataBase)
-
-
+const bodyWidth = $('body').width()
+let mobileBody = 650
 
 document.addEventListener('DOMContentLoaded',()=>{
     let itemsPerPage = 10;
@@ -68,7 +67,12 @@ function displayProducts(data,filterd){
 
         productElement.innerHTML = productTem
         productElement.addEventListener('click',()=>{
-            showproductPreview(product,offerPrice,ratingstars)
+            showproductPreview(product,offerPrice,ratingstars);
+            if(bodyWidth <= mobileBody){
+                $('.mob-search-box').hide()
+                $('#root .categories').hide()
+            }
+        
         })
 
 
@@ -223,6 +227,7 @@ function sizeRadioBtn(productId,array){
     return buttonString;
 }
 }
+
 
 
 
