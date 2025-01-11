@@ -2,8 +2,6 @@ import dataBase from "./DataBase.js";
 
 
 
-
-
 document.querySelector('#filter .apply .apply-filter').addEventListener('click',()=>{
     const categoriesElement = document.querySelectorAll('#filter .categories-box input.category:checked');
     const colorsElement = document.querySelectorAll('#filter .colors-box input.color:checked');

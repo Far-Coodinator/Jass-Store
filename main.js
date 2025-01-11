@@ -1,30 +1,71 @@
+let bodyWidth = $('body').width();
+let mobilewidth = 650
+
+window.addEventListener('resize',()=>{
+    bodyWidth = $('document').width()
+})
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 // open login form
-const userLogin = document.querySelector('#user-login')
-const showLogin = document.querySelector('#login');
+const showLogin = $('#login');
+let userLogin = $('#user-login')
 let loginForm = false
-userLogin.addEventListener('click',()=>{
-    if(!loginForm)
-        openLoginForm()
-    else
-        closeLoginForm()
+let mobLogin = false
+$('.user-login').on('click',()=>{
+    console.log('hi')
+    if(bodyWidth <= mobilewidth){
+        if(!mobLogin)
+            mobOpenacc()
+        else
+            mobCloseacc()
+    }
+    else{
+        if(!loginForm)
+            openLoginForm()
+        else
+            closeLoginForm()
+    }
+    
 });
 function openLoginForm(){
-    userLogin.style.background = 'rgba(33, 32, 32, 0.484)'
-    userLogin.style.color = 'white'
-    showLogin.style.right = '40px'
+    
+    userLogin.css('background-color','rgba(33, 32, 32, 0.484)')
+    userLogin.css('color','white')
+    showLogin.css('right','30px')
     loginForm = true
 }
 function closeLoginForm(){
-    showLogin.style.right = '-320px'
+    showLogin.css('right','-320px')
     loginForm = false
-    userLogin.style.background = 'white'
-    userLogin.style.color = 'black'
+    userLogin.css('background','white')
+    userLogin.css('color','black')
 }
+function mobOpenacc(){
+    $('#root .login').css('top','0')
+    $('#mobile-nav #account').css('background-color','black');
+    $('#mobile-nav #account').css('color','white')
+    mobLogin = true
+}
+
+function mobCloseacc(){
+    $('#root .login').css('top','calc(-100vh)')
+    $('#mobile-nav #account').css('color','black');
+    $('#mobile-nav #account').css('background-color','white');
+    mobLogin = false
+}
+
 
 // open register form
 const registerForm = document.querySelector('#register-form')

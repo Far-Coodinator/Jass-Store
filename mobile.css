@@ -22,8 +22,6 @@
     }
     #root .mob-search-box{
         display: block;
-        position: static;
-        top: 0px;
         background-color: white;
         height: max-content;
         z-index:10;
@@ -142,5 +140,40 @@
         padding: 2px;
         vertical-align: middle;
     }
+    #root .login{
+        width: 100vw;
+        height: calc(100vh - 50px);
+        top: calc(-100vh);
+        left: 0;
+        z-index: 20;
+        padding: 30px;
+        border-radius: 0;
 
+    }
+    #root .login img{
+        width: 100px;
+        margin: auto;
+        display: block;
+    }
+    #root .login h3{
+        margin-top: 20px;
+    }
+
+    #root #register-form {
+        width: 100vw;
+        top: 0;
+        left: calc(100vw);
+        transform: translate(0, 0);
+        z-index: 22;
+        display: flex;
+        transition: 1s;
+    }
+    #root #register-form #form{
+        width: 100vw;
+        height: calc(100vh - 50px);
+    }
+    #root #form h3{
+        text-align: center;
+    }
+    
 }

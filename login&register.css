@@ -14,6 +14,9 @@
     margin: 20px 0 30px;
     font-size: 1.6em;
 }
+#root .login img{
+    display: none;
+}
 #root .login fieldset{
     margin-bottom: 10px;
 }
