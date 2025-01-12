@@ -175,5 +175,14 @@
     #root #form h3{
         text-align: center;
     }
-    
+    .filter{
+        top: 0px;
+        z-index: 30;
+    }
+    .filter.active{
+        left: 0px;
+    }
+    .filter .apply{
+        bottom:  50px;
+    }
 }

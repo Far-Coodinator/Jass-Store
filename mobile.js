@@ -7,7 +7,12 @@ $('.register-entry').on('click',()=>{
 
 $('#form .close-tab').on('click',()=>{
     let widthRegister = $('#root #register-form').width()
-    $('#root #register-form').css('left',widthRegister+10)
+    $('#root #register-form').css('left',-widthRegister-10)
 })
 
 
+
+
+$('.mobile-nav #filter-mob').on('click',()=>{
+    $('.filter').toggleClass('active');
+})
