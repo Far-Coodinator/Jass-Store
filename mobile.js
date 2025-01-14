@@ -1,13 +1,13 @@
-
+import mobCloseacc from "./main.js"
 
 $('.register-entry').on('click',()=>{
-    $('#root #register-form').css('left','0')
+    $('#root #register-form').css('top','0')
     mobCloseacc()
 })
 
 $('#form .close-tab').on('click',()=>{
-    let widthRegister = $('#root #register-form').width()
-    $('#root #register-form').css('left',-widthRegister-10)
+    $('#root #register-form').css('top','100vh');
+    $('this').css('left','0')
 })
 
 

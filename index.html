@@ -146,11 +146,7 @@
         <div class="root" id="root">
             <input type="search" class="search-box" id="search-box-dec" placeholder="Search Here What you Want......">
             <div class="mob-search-box">
-                
                 <input type="search" class="search-box" id="search-box" placeholder="Search Here What you Want......">
-                <div class="filter-box">
-                    <i class="fa-solid fa-filter"></i>
-                    </div>
             </div>
             <div class="slideshow">
                 <div class="mySlides fade">
@@ -178,17 +174,18 @@
                     <p> Hand-bags </p>
                 </div>
                 <div class="category">
-                    <p> Men-Tshirts </p>
+                    <p> Men-Shoes </p>
                 </div>
                 <div class="category">
-                    <p> Girl-Tshirts </p>
+                    <p> Lady-Shoes </p>
                 </div>
                 <div class="category">
-                    <p> ladies-Pants </p>
+                    <p> Baby-Shoes </p>
                 </div>
                 <div class="category">
-                    <p> Men-Pants </p>
+                    <p> Hand-bags </p>
                 </div>
+                
             </div>
             <div class="products-container" id="products-container">
                 <!-- <div class="product-loading"> 
@@ -300,7 +297,8 @@
             </div>
 
             <div class="login" id="login">
-                <h3>Login</h3>
+                <img src="./logo and web related pics/16Sep24_Simon_Online_Shop_Free_Upload-removebg-preview.png" alt="">
+                <h3>Login to Jaas Store</h3>
                 <fieldset>
                     <legend>Email<sup><i class="fa-regular fa-circle-question" style="color: #0a0a0a;"></i></sup></legend>
                     <input type="email" class="login-inp" name="email" id="log-email">
@@ -378,11 +376,21 @@
 
         </div> 
         <div class="mobile-nav" id="mobile-nav">
-            <div class="option"><i class="fa-solid fa-bars"></i></div>
-            <div class="option"><i class="fa-regular fa-user"></i></div>
-            <div class="option"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="option"><i class="fa-regular fa-heart"></i></div>
-            <div class="option"><i class="fa-solid fa-house"></i></div>
+            <div class="option" id="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="option user-login" id="account">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="option" id="filter-mob">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+            <div class="option" id="likes">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="option" id="home">
+                <i class="fa-solid fa-house"></i>
+            </div>
         </div>
 
 
@@ -410,5 +418,6 @@
         <script src="DataBase.js" type="module"></script>
         <script src="productAndPreproduct.js" type="module"></script>
         <script src="filter.js" type="module"></script>
+        <script src="mobile.js" type="module"></script>
 </body>
 </html>

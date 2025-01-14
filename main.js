@@ -1,6 +1,5 @@
-let bodyWidth = $('body').width();
+let bodyWidth = parseFloat($('body').css('width'))
 let mobilewidth = 650
-
 window.addEventListener('resize',()=>{
     bodyWidth = $('document').width()
 })
@@ -60,7 +59,7 @@ function mobOpenacc(){
 }
 
 function mobCloseacc(){
-    $('#root .login').css('top','calc(-100vh)')
+    $('#root .login').css('top','100vh')
     $('#mobile-nav #account').css('color','black');
     $('#mobile-nav #account').css('background-color','white');
     mobLogin = false
@@ -82,10 +81,13 @@ function openRegisterForm(){
     })
 }
 function closeRegisterForm(){
-    registerForm.style.width = '0%'
+    if(!(bodyWidth <= mobilewidth)){
+        registerForm.style.width = '0%'
     setTimeout(()=>{
         registerForm.style.display = 'none' 
     },1000)
+    }
+    
 }
 // close register form
 document.querySelector('#form .close-tab').addEventListener('click',()=>{
@@ -191,3 +193,6 @@ function enableScroll() {
 }
 
 
+
+
+export default mobCloseacc;
