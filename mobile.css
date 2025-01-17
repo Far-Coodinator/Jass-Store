@@ -45,6 +45,12 @@
     #root{
         padding-top: 0;
     }
+    #root .categories .category{
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #mobile-nav{
         position: fixed;
         bottom: 0px;
@@ -65,10 +71,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: .4s;
     }
+    
     #mobile-nav i {
         font-size: 20px;
         color: var(--Text-icon);
+        transition: .4s;
+    }
+    #mobile-nav .option.active{
+        background-color: var(--primary-color);
+        color: var(--Primary-text);
+    }
+    #mobile-nav i.active-ico{
+        color: var(--Primary-text);
     }
     #root .categories{
         justify-content: start;

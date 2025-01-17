@@ -59,15 +59,15 @@ function closeLoginForm(){
 }
 export function mobOpenacc(){
     $('#root .login').css('top','0')
-    $('#mobile-nav #account').css('background-color','black');
-    $('#mobile-nav #account').css('color','white')
+    $('#mobile-nav #account').addClass('active')
+    $('#mobile-nav #account i').addClass('active-ico')
     mobLogin = true
 }
 
 function mobCloseacc(){
-    $('#root .login').css('top','100vh')
-    $('#mobile-nav #account').css('color','black');
-    $('#mobile-nav #account').css('background-color','white');
+    $('#root .login').css('top','100vh');
+    $('#mobile-nav #account').removeClass('active')
+    $('#mobile-nav #account i').removeClass('active-ico')
     mobLogin = false
 }
 

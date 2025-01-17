@@ -15,4 +15,6 @@ $('#form .close-tab').on('click',()=>{
 
 $('.mobile-nav #filter-mob').on('click',()=>{
     $('.filter').toggleClass('active');
+    $('#mobile-nav #filter-mob').toggleClass('active');
+    $('#mobile-nav #filter-mob i').toggleClass('active-ico')
 })
