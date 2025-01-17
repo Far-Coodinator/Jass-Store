@@ -1,57 +1,25 @@
-import dataBase from "./DataBase.js";
-const bodyWidth = $('body').width()
-let mobileBody = 650
-
-document.addEventListener('DOMContentLoaded',()=>{
-    let itemsPerPage = 10;
-    pageRender(1);
-    const loader = document.querySelector('#root .loading-animation')
-    let page = 2;   
-    
-    function lazyload(){
-        const {scrollTop,clientHeight,scrollHeight} = document.documentElement;
-        if(scrollTop + clientHeight >= scrollHeight-5){
-            setTimeout(()=>{
-                pageRender(page);
-                page += 1;
-            },500)
-        }
-    }
-
-    function pageRender(page){
-        const start = (page-1) * itemsPerPage;
-        const end = page * itemsPerPage;
-        const dataSlice = dataBase.slice(start,end);
-        displayProducts(dataSlice,false)
-        if(end >= dataBase.length)
-            loader.style.display = 'none';
-    }
-
-    
-
-
-    document.addEventListener('scroll',lazyload);
-
-});
-
-function displayProducts(data,filterd){
-    const container = document.querySelector('#products-container')
-    data.forEach( product =>{
-        const offerPrice = defindingOfferPrice(product.offer,product.price)
-        const ratingstars = defindingRatingStarts(product.rating)
-
-        const productElement = document.createElement('div')
-        productElement.className = 'product'
-        productElement.id = product.id
-        productElement.setAttribute('data-category', product.category);
-        if(!filterd)
-            container.appendChild(productElement)
-        else
-            container.prepend(productElement)
-
-        const productTem = `<div class="image-container">
+import dataBase from "./DataBase.js";import{userData}from "./main.js";import{mobOpenacc}from "./main.js";import{openLoginForm}from "./main.js";const bodyWidth=$('body').width()
+let mobileBody=650
+function width(){if(bodyWidth<=mobileBody)
+return!0
+else return!1}
+document.addEventListener('DOMContentLoaded',()=>{let itemsPerPage=10;pageRender(1);const loader=document.querySelector('#root .loading-animation')
+let page=2;function lazyload(){const{scrollTop,clientHeight,scrollHeight}=document.documentElement;if(scrollTop+clientHeight>=scrollHeight-5){setTimeout(()=>{pageRender(page);page+=1},500)}}
+function pageRender(page){const start=(page-1)*itemsPerPage;const end=page*itemsPerPage;const dataSlice=dataBase.slice(start,end);displayProducts(dataSlice,!1)
+if(end>=dataBase.length)
+loader.style.display='none'}
+document.addEventListener('scroll',lazyload)});function displayProducts(data,filterd){const container=document.querySelector('#products-container')
+data.forEach(product=>{const offerPrice=defindingOfferPrice(product.offer,product.price)
+const ratingstars=defindingRatingStarts(product.rating)
+const productElement=document.createElement('div')
+productElement.className='product'
+productElement.id=product.id
+productElement.setAttribute('data-category',product.category);if(!filterd)
+container.appendChild(productElement)
+else container.prepend(productElement)
+const productTem=`<div class="image-container">
                         <img src="${product.imagePath}" alt="${product.title}" class="product-pic">
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart" id="heart"></i>
                     </div>
                     <div class="details">
                         <p class="title">${product.title}</p>
@@ -64,49 +32,21 @@ function displayProducts(data,filterd){
                         </div>
                         <p class="price">price: ${offerPrice}</p>
                     </div>`
-
-        productElement.innerHTML = productTem
-        productElement.addEventListener('click',()=>{
-            showproductPreview(product,offerPrice,ratingstars);
-            if(bodyWidth <= mobileBody){
-                $('.mob-search-box').hide()
-                $('#root .categories').hide()
-            }
-        
-        })
-
-
-    });
-
-
-
-function defindingOfferPrice(offer,price){
-    if(offer && price){
-        const findOfferPrice = (price / 100 ) * offer
-        let offerPrice = (price-findOfferPrice).toFixed(2)
-        return `<span class="current-price">${offerPrice}</span>$  <span class="actul-price">${price}</span>$(<span>${offer}</span>%)`
-    }else
-        return `<span class="current-price">${price}</span>$`
-}
-
-function defindingRatingStarts(rating){
-    const positiveCount = Math.trunc(rating);
-    const halfStart = rating%1 ;
-    let starts = ``;
-    for(let i=0;i<positiveCount;i++){
-        starts += `<img src="./logo and web related pics/star.png" alt="">`
-    }
-    if(halfStart)
-        starts += `<img src="./logo and web related pics/rating.png" alt="">`
-    return starts
-}
-
-function showproductPreview(product,offerPrice,ratingstars){
-
-    const tagString = prodectTagesToString(product.tags)
-    const radioButtonForSizes = sizeRadioBtn(product.id,product.availableSizes)
-
-    const productPreviewTemplate = `<div class="product-preview" id="product-preview">
+productElement.innerHTML=productTem
+$('.product .details').off().on('click',()=>{showproductPreview(product,offerPrice,ratingstars);if(bodyWidth<=mobileBody){$('.mob-search-box').hide()
+$('#root .categories').hide()}})
+productElement.querySelector('#heart').addEventListener('click',()=>{if(userData.n==undefined){callAlert("⚠️","Please login now",mobOpenacc,openLoginForm)}else{productElement.querySelector('#heart').style.color='red'
+let pID=productElement.id
+like(pID)}})});function defindingOfferPrice(offer,price){if(offer&&price){const findOfferPrice=(price/100)*offer
+let offerPrice=(price-findOfferPrice).toFixed(2)
+return `<span class="current-price">${offerPrice}</span>$  <span class="actul-price">${price}</span>$(<span>${offer}</span>%)`}else return `<span class="current-price">${price}</span>$`}
+function defindingRatingStarts(rating){const positiveCount=Math.trunc(rating);const halfStart=rating%1;let starts=``;for(let i=0;i<positiveCount;i++){starts+=`<img src="./logo and web related pics/star.png" alt="">`}
+if(halfStart)
+starts+=`<img src="./logo and web related pics/rating.png" alt="">`
+return starts}
+function showproductPreview(product,offerPrice,ratingstars){const tagString=prodectTagesToString(product.tags)
+const radioButtonForSizes=sizeRadioBtn(product.id,product.availableSizes)
+const productPreviewTemplate=`<div class="product-preview" id="product-preview">
                 <div class="part-1">
                     <div class="part-1-a">
                         <span class="close-preview" id="close-preview">&times;</span>
@@ -177,86 +117,29 @@ function showproductPreview(product,offerPrice,ratingstars){
                     </div>
                 </div>
             `
-
-
-    const productPreviewContainer = document.querySelector('#root .product-preview-container');
-    productPreviewContainer.innerHTML = productPreviewTemplate
-    productPreviewContainer.style.display = 'flex';
-
-    document.querySelector('#root .product-preview-container .part-1-a .close-preview').addEventListener('click',()=>{
-        productPreviewContainer.style.display = 'none'
-    })
-    $('#root .product-preview-container .part-1-a .pre-back').on('click',()=>{
-        productPreviewContainer.style.display = 'none'
-    });
-
-    // function for increse the quantity
-    document.querySelector('.product-preview-container .add').addEventListener('click',()=>{
-        const inputElement = document.querySelector('.product-preview-container .unit-box input')
-        let increse = Number(inputElement.value)
-        increse += 1
-        inputElement.value = increse
-        console.log(increse)
-    })
-
-    // function for decrece th quantity
-    document.querySelector('.product-preview-container .minus').addEventListener('click',()=>{
-        const inputElement = document.querySelector('.product-preview-container .unit-box input')
-        let increse = Number(inputElement.value)
-        if(increse > 1){
-            increse -= 1
-            inputElement.value = increse
-        }
-    })
-
-}
-
-
-function prodectTagesToString(array){
-    let string = '';
-    array.forEach((x=>{
-        string += ('#'+x+" ")
-    }));
-    return string;
-}
-
-function sizeRadioBtn(productId,array){
-    let buttonString = "";
-    array.forEach((x=>{
-        const tag = `<div class="size-option">
+const productPreviewContainer=document.querySelector('#root .product-preview-container');productPreviewContainer.innerHTML=productPreviewTemplate
+productPreviewContainer.style.display='flex';document.querySelector('#root .product-preview-container .part-1-a .close-preview').addEventListener('click',()=>{productPreviewContainer.style.display='none'})
+$('#root .product-preview-container .part-1-a .pre-back').on('click',()=>{productPreviewContainer.style.display='none'});document.querySelector('.product-preview-container .add').addEventListener('click',()=>{const inputElement=document.querySelector('.product-preview-container .unit-box input')
+let increse=Number(inputElement.value)
+increse+=1
+inputElement.value=increse
+console.log(increse)})
+document.querySelector('.product-preview-container .minus').addEventListener('click',()=>{const inputElement=document.querySelector('.product-preview-container .unit-box input')
+let increse=Number(inputElement.value)
+if(increse>1){increse-=1
+inputElement.value=increse}})}
+function prodectTagesToString(array){let string='';array.forEach((x=>{string+=('#'+x+" ")}));return string}
+function sizeRadioBtn(productId,array){let buttonString="";array.forEach((x=>{const tag=`<div class="size-option">
                         <input type="radio" id="size-${x}-${productId}" name="size" value="${x}">
                         <label for="size-${x}-${productId}">${x}</label>
                     </div>`
-        buttonString += tag;
-    }));
-    return buttonString;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default displayProducts;
+buttonString+=tag}));return buttonString}}
+function like(productId){let pID=Number(productId)
+userData.l.push(pID)
+console.log(userData)}
+export function callAlert(alertName,msg,returnFntMobile,returnFntDesktop){$('#h-b-alert').css('display','flex');$('#h-b-alert .imoji').text(alertName)
+$('#h-b-alert p').text(msg)
+$('#h-b-alert button').on('click',()=>{$('#h-b-alert').css('display','none');if(width)
+returnFntMobile()
+else returnFntDesktop()})}
+export default displayProducts
