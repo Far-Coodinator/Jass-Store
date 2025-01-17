@@ -51,6 +51,9 @@
         justify-content: center;
         align-items: center;
     }
+    .categories {
+        padding-right: 10px !important;
+    }
     #mobile-nav{
         position: fixed;
         bottom: 0px;

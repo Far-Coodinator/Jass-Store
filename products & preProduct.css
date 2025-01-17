@@ -97,7 +97,7 @@
     height: 350px;
     display: flex;
     position: relative;
-    background-color: var(--platinum);
+    background-color: var(--Text-icon);
 }
 
 .product-preview-container .product-preview > div{
@@ -332,7 +332,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--lightGray);
+    background-color: var(--secondary-text);
     padding: 5px;
     width: 70%;
     height: 50px;
