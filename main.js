@@ -4,7 +4,7 @@ window.addEventListener('resize',()=>{
     bodyWidth = $('document').width()
 })
 
- export let userData = {
+export let userData = {
     n:undefined,
     p:undefined,
     l:[],
@@ -12,6 +12,10 @@ window.addEventListener('resize',()=>{
     no:undefined,
 
 }
+
+$('#mobile-nav #home').on('click',function(){
+    window.location.reload()
+})
 
 
 
