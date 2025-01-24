@@ -1,5 +1,5 @@
 import dataBase from "./DataBase.js";
-
+import displayProducts from "./productAndPreproduct.js"
 
 
 document.querySelector('#filter .apply .apply-filter').addEventListener('click',()=>{
@@ -19,6 +19,7 @@ document.querySelector('#filter .apply .apply-filter').addEventListener('click',
             (!sizes.length || checkArrayInArray(sizes,product.availableSizes))&&
             (minMaxPrice(minPrice,maxPrice,product.price));
     })
+    console.log(filteredData)
     displayProducts(filteredData,true)
     
 })

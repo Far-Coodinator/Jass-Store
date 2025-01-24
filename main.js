@@ -11,7 +11,7 @@ window.addEventListener('resize',()=>{
 export let userData = {
     n:true,
     p:undefined,
-    L:[1, 12, 20, 11, 15],
+    L:[],
     e:undefined,
     no:undefined,
 

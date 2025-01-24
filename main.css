@@ -177,7 +177,7 @@ nav > div{
    background-color: rgba(106, 103, 103, 0.468);
    width: 100vw;
    height: 100vh;
-   z-index: 40;
+   z-index: 400;
    display: none;
    justify-content: center;
    align-items: center;
@@ -204,6 +204,7 @@ nav > div{
     font-weight: 600;
     letter-spacing: 1px;
     word-spacing: 3px;
+    text-align: center;
 }
 #h-b-alert  button{
     width: 80%;

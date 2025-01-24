@@ -262,9 +262,7 @@ function sizeRadioBtn(productId,array){
 
 function like(productId){
     let pID = Number(productId)
-    userData.l.push(pID)
-    console.log(userData)
-
+    userData.L.push(pID)
 }
 
 

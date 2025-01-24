@@ -1,5 +1,6 @@
 import dataBase from "./DataBase.js"
-import { userData } from "./main.js"
+import { userData } from "./main.js";
+
 $('#mobile-nav #likes').on('click',()=>{
     $('#mobile-nav #likes').toggleClass('active');
     $('#mobile-nav #likes i').toggleClass('activ-ico')
@@ -18,11 +19,12 @@ export function closeLike_pro(){
 }
 
 function likeItems(array){
+    $('.likes-product .f-products').html("");
     array.forEach( x => {
         let likeProduct = dataBase.find( item => item.id == x);
         const offerPriceLikeProduct = defindingOfferPrice(likeProduct.offer,likeProduct.price)
         const likeProductTemp = `
-                    <div class="f-product">
+                    <div class="f-product" id="fav-${likeProduct.id}">
                         <div class="b-1-like">
                             <div class="f-1">
                                 <img src="${likeProduct.imagePath}" alt="" class="p-img">
@@ -36,13 +38,22 @@ function likeItems(array){
                             <i class="fa-regular fa-trash-can"></i>
                         </div>
                     </div>`
+            let pId = likeProduct.id
+            $('.likes-product .f-products').prepend(likeProductTemp);
+            let favId = `#fav-${pId}`
+            $('.delete-likes').on('click',function(){
 
 
-                console.log(likeProductTemp)
-
-
-
-            $('.likes-product .f-products').prepend(likeProductTemp)
+                let likeArray = userData.L;
+                $('#h-b-alert').css('display','flex');
+                $('#h-b-alert .imoji').text("🚮")
+                $('#h-b-alert p').text("Do you want to remove from favorite")
+                $('#h-b-alert button').on('click',function(){
+                    $(favId).remove();
+                    likeArray.splice(likeArray.indexOf(pId),1)
+                    $('#h-b-alert').css('display','none');
+                })
+            });
     });
 }
 

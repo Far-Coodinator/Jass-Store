@@ -11,49 +11,47 @@ export function closefiterMobile(){
     $('#mobile-nav #menu').toggleClass('active');
 };
 
+let totalResult = [];
+$('#root .categories .set-fun').on('click', function () {
+    let elementId = $(this).attr('id');
+    deleteOldCategory(totalResult);
+    totalResult = category(elementId);
+    displayProducts(totalResult, true);
+    
+});
 
 
-$('#root .categories .set-fun').on('click',function(){
-    let elementId = $(this).attr('id')
-    let result = category(elementId)
-    displayProducts(result,true)
-})
-
-
-
-
-function category(category){
+// Function to filter category data
+function category(category) {
     let result;
     switch (category) {
         case 'WomenHandbags':
-            result = dataBase.filter( val => val.category == 'WomenHandbags');
+            result = dataBase.filter((val) => val.category === 'WomenHandbags');
             break;
-    
-        case 'MenShoes' :
-            result = dataBase.filter( val => val.category == 'MenShoes');
+        case 'MenShoes':
+            result = dataBase.filter((val) => val.category === 'MenShoes');
             break;
-        
         case 'babyshoes':
-            result = dataBase.filter( val => val.category == 'babyshoes')
+            result = dataBase.filter((val) => val.category === 'babyshoes');
             break;
-
         case 'ladyShoes':
-            result = dataBase.filter( val => val.category == 'ladyShoes')
+            result = dataBase.filter((val) => val.category === 'ladyShoes');
             break;
-
+        default:
+            result = [];
+            break;
     }
-    resultLength = result.length
-    console.log(resultLength)
-    return result
+    return result;
 }
+
+
 
 function deleteOldCategory(num){
-        const products = document.querySelectorAll('#root .product')
-        const parent = document.querySelector('#root .products-container')
-        for(let i=num-1;i<=0;i--){
-            parent.removeChild(products[i])
+    if(num){
+        const oldCategory = document.querySelectorAll('.products-container .product');
+        for(let i = 0 ; i <= num.length ;i++){
+            oldCategory[i].remove();
         }
-
+    }  
 }
     
-deleteOldCategory()
