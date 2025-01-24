@@ -160,15 +160,15 @@
     font-weight: 500;
     font-size: 1.2rem;
 }
-.product-preview .price{
+.price{
     margin-top: 2px;
 }
 
-.product-preview .price .current-price{
+.price .current-price{
     font-family: "Merriweather", serif;
     color: red;
 } 
-.product-preview .price .actul-price{
+.price .actul-price{
     font-size: 0.9em;
     text-decoration: line-through;
 }

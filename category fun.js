@@ -3,8 +3,13 @@ import displayProducts from './productAndPreproduct.js'
 
 $('#mobile-nav #menu').on('click',function(){
     $('#mobile-menu.mobile-menu').toggleClass('active')
-    $('#mobile-nav #menu').toggleClass('active')
-})
+    $('#mobile-nav #menu').toggleClass('active');
+});
+
+export function closefiterMobile(){
+    $('#mobile-menu.mobile-menu').toggleClass('active')
+    $('#mobile-nav #menu').toggleClass('active');
+};
 
 
 
@@ -21,22 +26,34 @@ function category(category){
     let result;
     switch (category) {
         case 'WomenHandbags':
-            return result = dataBase.filter( val => val.category == 'WomenHandbags');
+            result = dataBase.filter( val => val.category == 'WomenHandbags');
             break;
     
         case 'MenShoes' :
-            return result = dataBase.filter( val => val.category == 'MenShoes');
+            result = dataBase.filter( val => val.category == 'MenShoes');
             break;
         
         case 'babyshoes':
-            return result = dataBase.filter( val => val.category == 'babyshoes')
+            result = dataBase.filter( val => val.category == 'babyshoes')
             break;
 
         case 'ladyShoes':
-            return result = dataBase.filter( val => val.category == 'ladyShoes')
+            result = dataBase.filter( val => val.category == 'ladyShoes')
             break;
 
     }
+    resultLength = result.length
+    console.log(resultLength)
+    return result
 }
 
-console.log(category('babyshoes'))
+function deleteOldCategory(num){
+        const products = document.querySelectorAll('#root .product')
+        const parent = document.querySelector('#root .products-container')
+        for(let i=num-1;i<=0;i--){
+            parent.removeChild(products[i])
+        }
+
+}
+    
+deleteOldCategory()

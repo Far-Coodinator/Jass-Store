@@ -1,3 +1,7 @@
+import { closefiterMobile } from "./category fun.js"
+
+
+
 let bodyWidth = parseFloat($('body').css('width'))
 let mobilewidth = 650
 window.addEventListener('resize',()=>{
@@ -5,9 +9,9 @@ window.addEventListener('resize',()=>{
 })
 
 export let userData = {
-    n:undefined,
+    n:true,
     p:undefined,
-    l:[],
+    L:[1, 12, 20, 11, 15],
     e:undefined,
     no:undefined,
 
@@ -201,6 +205,10 @@ function enableScroll() {
     // Restore the scroll position
     window.scrollTo(0, scrollPosition);
 }
+
+
+
+
 
 
 

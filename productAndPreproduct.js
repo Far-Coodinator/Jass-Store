@@ -105,14 +105,14 @@ function displayProducts(data,filterd){
 
 
 
-function defindingOfferPrice(offer,price){
-    if(offer && price){
-        const findOfferPrice = (price / 100 ) * offer
-        let offerPrice = (price-findOfferPrice).toFixed(2)
-        return `<span class="current-price">${offerPrice}</span>$  <span class="actul-price">${price}</span>$(<span>${offer}</span>%)`
-    }else
-        return `<span class="current-price">${price}</span>$`
-}
+    function defindingOfferPrice(offer,price){
+        if(offer && price){
+            const findOfferPrice = (price / 100 ) * offer
+            let offerPrice = (price-findOfferPrice).toFixed(2)
+            return `<span class="current-price">${offerPrice}</span>$  <span class="actul-price">${price}</span>$(<span>${offer}</span>%)`
+        }else
+            return `<span class="current-price">${price}</span>$`
+    }
 
 function defindingRatingStarts(rating){
     const positiveCount = Math.trunc(rating);
